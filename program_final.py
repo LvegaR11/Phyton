@@ -1,10 +1,20 @@
-print("Bienvenido al recopilador de datos : ")
+print("Bienvenido a la encuesta de datos basico : ")
 
 nombre = input("Por favor ingrese su nombre : ")
 
 comida_favorita = input("¿Cual es su comida favorita? :  ")
 dinero_disponible = int(input("¿Cuanto dinero tiene en su cartera? : "))
-clima_frio = input("¿Te gusta el clima frio? : ")
+
+while True:
+    clima_favorito = input("¿Te gusta el clima frio? (si/no) : ")
+    if clima_favorito == 'si':
+        clima_frio = True
+        break
+    elif clima_favorito == 'no':
+        clima_frio = False
+        break
+    else:
+        print("Por favor, ingrese 'si' o 'no' ")
 
 flag = True
 def calcular(edad):
@@ -23,8 +33,8 @@ while flag:
         flag = False
     except:
         print("Usted no ingreso un valor valido")
-print("Gracias por completar el formulario")
 
+print("Gracias por completar el formulario")
 
 print("Su informacion es:")
 print(f"Nombre: {nombre}")
